@@ -1,5 +1,5 @@
-class Assets {
-  Assets._();
+class Images {
+  Images._();
 
   static const String iconsAvatar1 = "assets/icons/avatar_1.svg";
 
