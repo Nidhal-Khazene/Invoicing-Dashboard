@@ -1,6 +1,6 @@
 class DrawerItemModel {
-  String title;
-  String leading;
+  final String title;
+  final String leading;
 
-  DrawerItemModel({required this.title, required this.leading});
+  const DrawerItemModel({required this.title, required this.leading});
 }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:invoicing_dashboard/utils/images.dart';
 import 'package:invoicing_dashboard/widgets/user_info_list_tile.dart';
 
+import 'drawer_item_listview_builder.dart';
+
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
 
@@ -17,6 +19,7 @@ class CustomDrawer extends StatelessWidget {
             subtitle: "demo@gmail.com",
           ),
           SizedBox(height: 8),
+          DrawerItemListView(),
         ],
       ),
     );
