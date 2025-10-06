@@ -1,13 +1,21 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import '../utils/images.dart';
 import 'drawer_item.dart';
 import 'drawer_item_model.dart';
 
-class DrawerItemListView extends StatelessWidget {
+class DrawerItemListView extends StatefulWidget {
   const DrawerItemListView({super.key});
 
-  static final List<DrawerItemModel> drawerItemList = const [
+  @override
+  State<DrawerItemListView> createState() => _DrawerItemListViewState();
+}
+
+class _DrawerItemListViewState extends State<DrawerItemListView> {
+  int selectedIndex = 0;
+  final List<DrawerItemModel> drawerItemList = const [
     DrawerItemModel(title: "Dashboard", leading: Images.iconsDashboard),
     DrawerItemModel(title: "My Transaction", leading: Images.iconsTransaction),
     DrawerItemModel(title: "Statistics", leading: Images.iconsStatistics),
@@ -20,7 +28,6 @@ class DrawerItemListView extends StatelessWidget {
       leading: Images.iconsMyInvestments,
     ),
   ];
-
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -30,7 +37,20 @@ class DrawerItemListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(top: 20),
-          child: DrawerItem(drawerItemModel: drawerItemList[index]),
+          child: GestureDetector(
+            onTap: () {
+              if (selectedIndex != index) {
+                setState(() {
+                  selectedIndex = index;
+                  log("$selectedIndex");
+                });
+              }
+            },
+            child: DrawerItem(
+              isActive: selectedIndex == index,
+              drawerItemModel: drawerItemList[index],
+            ),
+          ),
         );
       },
     );
