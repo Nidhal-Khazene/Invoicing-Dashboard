@@ -10,8 +10,9 @@ class InvoicingDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: DashboardView(),
+    return MaterialApp(
+      theme: ThemeData(fontFamily: "Montserrat"),
+      home: const DashboardView(),
       debugShowCheckedModeBanner: false,
     );
   }

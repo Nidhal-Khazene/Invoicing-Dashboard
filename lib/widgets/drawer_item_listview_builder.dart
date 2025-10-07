@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 import '../utils/images.dart';
@@ -42,7 +40,6 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
               if (selectedIndex != index) {
                 setState(() {
                   selectedIndex = index;
-                  log("$selectedIndex");
                 });
               }
             },
