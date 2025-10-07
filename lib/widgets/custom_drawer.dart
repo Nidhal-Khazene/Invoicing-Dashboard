@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:invoicing_dashboard/utils/images.dart';
+import 'package:invoicing_dashboard/widgets/active_and_inactive_drawer_item.dart';
+import 'package:invoicing_dashboard/widgets/drawer_item_model.dart';
 import 'package:invoicing_dashboard/widgets/user_info_list_tile.dart';
 
 import 'drawer_item_listview_builder.dart';
@@ -11,15 +13,38 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: const Column(
-        children: [
-          UserInfoListTile(
-            image: Images.iconsAvatar1,
-            title: "Lekan Okeowo",
-            subtitle: "demo@gmail.com",
+      child: const CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: UserInfoListTile(
+              image: Images.iconsAvatar1,
+              title: "Lekan Okeowo",
+              subtitle: "demo@gmail.com",
+            ),
           ),
-          SizedBox(height: 8),
+          SliverToBoxAdapter(child: SizedBox(height: 8)),
           DrawerItemListView(),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(child: SizedBox()),
+                InactiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    title: "Setting system",
+                    leading: Images.iconsSetting,
+                  ),
+                ),
+                InactiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    title: "Logout account",
+                    leading: Images.iconsLogout,
+                  ),
+                ),
+                SizedBox(height: 48),
+              ],
+            ),
+          ),
         ],
       ),
     );
