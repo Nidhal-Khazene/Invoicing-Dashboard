@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:invoicing_dashboard/widgets/range_option.dart';
 
-import '../constants.dart';
 import '../utils/app_styles.dart';
 
-class AllExpensesRow extends StatelessWidget {
-  const AllExpensesRow({super.key});
+class AllExpensesHeader extends StatelessWidget {
+  const AllExpensesHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,17 +21,7 @@ class AllExpensesRow extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
           ),
-          child: Row(
-            children: [
-              Text("Monthly", style: AppStyles.medium16),
-              const SizedBox(width: 18),
-              Icon(
-                Icons.keyboard_arrow_down_rounded,
-                color: kSecondaryColor,
-                size: 32,
-              ),
-            ],
-          ),
+          child: const RangeOption(),
         ),
       ],
     );
