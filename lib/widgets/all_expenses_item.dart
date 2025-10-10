@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:invoicing_dashboard/utils/images.dart';
+import 'package:invoicing_dashboard/utils/app_styles.dart';
 import 'package:invoicing_dashboard/widgets/all_expenses_item_header.dart';
+import 'package:invoicing_dashboard/widgets/all_expenses_item_model.dart';
 
 class AllExpensesItem extends StatelessWidget {
-  const AllExpensesItem({super.key});
-
+  const AllExpensesItem({super.key, required this.allExpensesItemModel});
+  final AllExpensesItemModel allExpensesItemModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,8 +17,17 @@ class AllExpensesItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      child: const Column(
-        children: [AllExpensesItemHeader(iconImage: Images.iconsIncome)],
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          AllExpensesItemHeader(iconImage: allExpensesItemModel.icon),
+          const SizedBox(height: 34),
+          Text(allExpensesItemModel.name, style: AppStyles.semiBold16),
+          const SizedBox(height: 8),
+          Text(allExpensesItemModel.date, style: AppStyles.regular14),
+          const SizedBox(height: 16),
+          Text(allExpensesItemModel.price, style: AppStyles.semiBold24),
+        ],
       ),
     );
   }

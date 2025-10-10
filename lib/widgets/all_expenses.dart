@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:invoicing_dashboard/utils/images.dart';
 import 'package:invoicing_dashboard/widgets/all_expenses_item.dart';
+import 'package:invoicing_dashboard/widgets/all_expenses_item_model.dart';
 
 import 'all_expenses_header.dart';
 
@@ -14,13 +16,20 @@ class AllExpenses extends StatelessWidget {
         color: Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            AllExpensesHeader(),
-            SizedBox(height: 16),
-            AllExpensesItem(),
+            const AllExpensesHeader(),
+            const SizedBox(height: 16),
+            AllExpensesItem(
+              allExpensesItemModel: AllExpensesItemModel(
+                icon: Images.iconsIncome,
+                name: "Income",
+                date: "April 2022",
+                price: r"$20,129",
+              ),
+            ),
           ],
         ),
       ),
