@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:invoicing_dashboard/widgets/all_expenses_item.dart';
 
 import 'all_expenses_header.dart';
 
@@ -15,7 +16,13 @@ class AllExpenses extends StatelessWidget {
       ),
       child: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 20),
-        child: Column(children: [AllExpensesHeader()]),
+        child: Column(
+          children: [
+            AllExpensesHeader(),
+            SizedBox(height: 16),
+            AllExpensesItem(),
+          ],
+        ),
       ),
     );
   }

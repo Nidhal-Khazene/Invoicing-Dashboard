@@ -12,17 +12,7 @@ class AllExpensesHeader extends StatelessWidget {
       children: [
         Text("All Expenses", style: AppStyles.semiBold20),
         const Expanded(child: SizedBox()),
-        Container(
-          padding: const EdgeInsets.all(12),
-          decoration: ShapeDecoration(
-            color: Colors.white,
-            shape: RoundedRectangleBorder(
-              side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
-          child: const RangeOption(),
-        ),
+        const RangeOption(),
       ],
     );
   }
