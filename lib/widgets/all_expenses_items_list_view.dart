@@ -27,11 +27,21 @@ class AllExpensesItemsListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: itemModel.length,
-      itemBuilder: (context, index) {
-        return AllExpensesItem(allExpensesItemModel: itemModel[index]);
-      },
+    return Row(
+      children: itemModel.asMap().entries.map((element) {
+        int index = element.key;
+        var item = element.value;
+        if (index == 1) {
+          return Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              child: AllExpensesItem(allExpensesItemModel: item),
+            ),
+          );
+        } else {
+          return Expanded(child: AllExpensesItem(allExpensesItemModel: item));
+        }
+      }).toList(),
     );
   }
 }
