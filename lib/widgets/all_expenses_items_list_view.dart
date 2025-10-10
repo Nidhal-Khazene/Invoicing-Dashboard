@@ -5,6 +5,7 @@ import 'package:invoicing_dashboard/widgets/all_expenses_item_model.dart';
 
 class AllExpensesItemsListView extends StatelessWidget {
   const AllExpensesItemsListView({super.key});
+
   static const List<AllExpensesItemModel> itemModel = [
     AllExpensesItemModel(
       icon: Images.iconsBalance,
@@ -25,6 +26,7 @@ class AllExpensesItemsListView extends StatelessWidget {
       price: r"$20,129",
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -35,11 +37,16 @@ class AllExpensesItemsListView extends StatelessWidget {
           return Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: AllExpensesItem(allExpensesItemModel: item),
+              child: AllExpensesItem(
+                isActive: false,
+                allExpensesItemModel: item,
+              ),
             ),
           );
         } else {
-          return Expanded(child: AllExpensesItem(allExpensesItemModel: item));
+          return Expanded(
+            child: AllExpensesItem(isActive: false, allExpensesItemModel: item),
+          );
         }
       }).toList(),
     );
