@@ -13,6 +13,6 @@ class AllExpensesItem extends StatelessWidget {
   final bool isActive;
   @override
   Widget build(BuildContext context) {
-    return InActiveAllExpensesItem(allExpensesItemModel: allExpensesItemModel);
+    return ActiveAllExpensesItem(allExpensesItemModel: allExpensesItemModel);
   }
 }
