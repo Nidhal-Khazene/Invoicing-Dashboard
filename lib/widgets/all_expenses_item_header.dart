@@ -42,6 +42,7 @@ class AllExpensesItemHeader extends StatelessWidget {
           child: Icon(
             Icons.arrow_back_ios_new_outlined,
             color: iconColor ?? kSecondaryColor,
+            size: 20,
           ),
         ),
       ],

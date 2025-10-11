@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:invoicing_dashboard/constants.dart';
 
 import '../utils/app_styles.dart';
 import 'all_expenses_item_header.dart';
@@ -26,7 +27,11 @@ class InActiveAllExpensesItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AllExpensesItemHeader(iconImage: allExpensesItemModel.icon),
+          AllExpensesItemHeader(
+            iconImage: allExpensesItemModel.icon,
+            backgroundIconColor: const Color(0xffFAFAFA),
+            iconColor: kPrimaryColor,
+          ),
           const SizedBox(height: 34),
           Text(allExpensesItemModel.name, style: AppStyles.semiBold16),
           const SizedBox(height: 8),
