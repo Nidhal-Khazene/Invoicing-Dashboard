@@ -8,17 +8,17 @@ class LatestTransectionListView extends StatelessWidget {
 
   static const List<UserInfoModel> items = [
     UserInfoModel(
-      image: Images.iconsAvatar1,
+      image: Images.iconsAvatar2,
       title: "Madrani Andi",
       subtitle: "Madraniadi20@gmail",
     ),
     UserInfoModel(
-      image: Images.iconsAvatar2,
+      image: Images.iconsAvatar3,
       title: "Josua Nunito",
       subtitle: "Josh Nunito@gmail.com",
     ),
     UserInfoModel(
-      image: Images.iconsAvatar3,
+      image: Images.iconsAvatar2,
       title: "Madrani Andi",
       subtitle: "Madraniadi20@gmail",
     ),
@@ -26,12 +26,18 @@ class LatestTransectionListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return UserInfoListTile(userInfoModel: items[index]);
-      },
+    return SizedBox(
+      height: 100,
+      child: ListView.builder(
+        padding: EdgeInsets.zero,
+        scrollDirection: Axis.horizontal,
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return IntrinsicWidth(
+            child: UserInfoListTile(userInfoModel: items[index]),
+          );
+        },
+      ),
     );
   }
 }
