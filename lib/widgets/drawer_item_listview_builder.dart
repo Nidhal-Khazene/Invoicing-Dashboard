@@ -30,7 +30,6 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
   Widget build(BuildContext context) {
     return SliverList.builder(
       itemCount: drawerItemList.length,
-
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(top: 20),

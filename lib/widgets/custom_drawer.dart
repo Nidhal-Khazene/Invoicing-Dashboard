@@ -17,11 +17,14 @@ class CustomDrawer extends StatelessWidget {
       child: const CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child: UserInfoListTile(
-              userInfoModel: UserInfoModel(
-                image: Images.iconsAvatar1,
-                title: "Lekan Okeowo",
-                subtitle: "demo@gmail.com",
+            child: Padding(
+              padding: EdgeInsets.only(right: 28, left: 15, top: 20),
+              child: UserInfoListTile(
+                userInfoModel: UserInfoModel(
+                  image: Images.iconsAvatar1,
+                  title: "Lekan Okeowo",
+                  subtitle: "demo@gmail.com",
+                ),
               ),
             ),
           ),
