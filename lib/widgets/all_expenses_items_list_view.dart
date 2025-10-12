@@ -3,29 +3,36 @@ import 'package:invoicing_dashboard/utils/images.dart';
 import 'package:invoicing_dashboard/widgets/all_expenses_item.dart';
 import 'package:invoicing_dashboard/widgets/all_expenses_item_model.dart';
 
-class AllExpensesItemsListView extends StatelessWidget {
+class AllExpensesItemsListView extends StatefulWidget {
   const AllExpensesItemsListView({super.key});
 
-  static const List<AllExpensesItemModel> itemModel = [
-    AllExpensesItemModel(
+  @override
+  State<AllExpensesItemsListView> createState() =>
+      _AllExpensesItemsListViewState();
+}
+
+class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
+  final List<AllExpensesItemModel> itemModel = [
+    const AllExpensesItemModel(
       icon: Images.iconsBalance,
       date: "April 2022",
       name: "Balance",
       price: r"$20,129",
     ),
-    AllExpensesItemModel(
+    const AllExpensesItemModel(
       icon: Images.iconsIncome,
       date: "April 2022",
       name: "Income",
       price: r"$20,129",
     ),
-    AllExpensesItemModel(
+    const AllExpensesItemModel(
       icon: Images.iconsExpenses,
       date: "April 2022",
       name: "Expenses",
       price: r"$20,129",
     ),
   ];
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -35,20 +42,39 @@ class AllExpensesItemsListView extends StatelessWidget {
         var item = element.value;
         if (index == 1) {
           return Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: AllExpensesItem(
-                isActive: false,
-                allExpensesItemModel: item,
+            child: GestureDetector(
+              onTap: () {
+                updateSelectedIndex(index);
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: AllExpensesItem(
+                  isActive: selectedIndex == index,
+                  allExpensesItemModel: item,
+                ),
               ),
             ),
           );
         } else {
           return Expanded(
-            child: AllExpensesItem(isActive: false, allExpensesItemModel: item),
+            child: GestureDetector(
+              onTap: () {
+                updateSelectedIndex(index);
+              },
+              child: AllExpensesItem(
+                isActive: selectedIndex == index,
+                allExpensesItemModel: item,
+              ),
+            ),
           );
         }
       }).toList(),
     );
+  }
+
+  void updateSelectedIndex(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
   }
 }
