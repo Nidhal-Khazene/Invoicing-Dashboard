@@ -13,10 +13,12 @@ class UserInfoListTile extends StatelessWidget {
       margin: const EdgeInsets.only(right: 28, left: 20, top: 20),
       color: const Color(0xffFAFAFA),
       elevation: 0,
-      child: ListTile(
-        leading: SvgPicture.asset(userInfoModel.image),
-        title: Text(userInfoModel.title, style: AppStyles.semiBold16),
-        subtitle: Text(userInfoModel.subtitle, style: AppStyles.regular12),
+      child: Center(
+        child: ListTile(
+          leading: SvgPicture.asset(userInfoModel.image),
+          title: Text(userInfoModel.title, style: AppStyles.semiBold16),
+          subtitle: Text(userInfoModel.subtitle, style: AppStyles.regular12),
+        ),
       ),
     );
   }
