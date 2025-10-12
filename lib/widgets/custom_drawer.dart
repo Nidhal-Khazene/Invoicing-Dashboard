@@ -3,6 +3,7 @@ import 'package:invoicing_dashboard/utils/images.dart';
 import 'package:invoicing_dashboard/widgets/active_and_inactive_drawer_item.dart';
 import 'package:invoicing_dashboard/widgets/drawer_item_model.dart';
 import 'package:invoicing_dashboard/widgets/user_info_list_tile.dart';
+import 'package:invoicing_dashboard/widgets/user_info_model.dart';
 
 import 'drawer_item_listview_builder.dart';
 
@@ -17,9 +18,11 @@ class CustomDrawer extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
             child: UserInfoListTile(
-              image: Images.iconsAvatar1,
-              title: "Lekan Okeowo",
-              subtitle: "demo@gmail.com",
+              userInfoModel: UserInfoModel(
+                image: Images.iconsAvatar1,
+                title: "Lekan Okeowo",
+                subtitle: "demo@gmail.com",
+              ),
             ),
           ),
           SliverToBoxAdapter(child: SizedBox(height: 8)),
