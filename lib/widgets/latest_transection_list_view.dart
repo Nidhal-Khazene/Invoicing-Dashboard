@@ -22,22 +22,37 @@ class LatestTransectionListView extends StatelessWidget {
       title: "Madrani Andi",
       subtitle: "Madraniadi20@gmail",
     ),
+    UserInfoModel(
+      image: Images.iconsAvatar3,
+      title: "Josua Nunito",
+      subtitle: "Josh Nunito@gmail.com",
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 80,
-      child: ListView.builder(
-        padding: EdgeInsets.zero,
-        scrollDirection: Axis.horizontal,
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return IntrinsicWidth(
-            child: UserInfoListTile(userInfoModel: items[index]),
-          );
-        },
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: items
+            .map(
+              (e) => IntrinsicWidth(child: UserInfoListTile(userInfoModel: e)),
+            )
+            .toList(),
       ),
     );
+    // return SizedBox(
+    //   height: 80,
+    //   child: ListView.builder(
+    //     padding: EdgeInsets.zero,
+    //     scrollDirection: Axis.horizontal,
+    //     itemCount: items.length,
+    //     itemBuilder: (context, index) {
+    //       return IntrinsicWidth(
+    //         child: UserInfoListTile(userInfoModel: items[index]),
+    //       );
+    //     },
+    //   ),
+    // );
   }
 }
