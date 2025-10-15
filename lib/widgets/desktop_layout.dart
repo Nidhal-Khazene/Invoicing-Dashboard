@@ -16,6 +16,7 @@ class DesktopLayout extends StatelessWidget {
           flex: 2,
           child: CustomScrollView(
             slivers: [
+              SliverToBoxAdapter(child: SizedBox(height: 40)),
               SliverToBoxAdapter(child: AllExpenses()),
               SliverToBoxAdapter(child: SizedBox(height: 24)),
               SliverToBoxAdapter(child: QuickInvoice()),
