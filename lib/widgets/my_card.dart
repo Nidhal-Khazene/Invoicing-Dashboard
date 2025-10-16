@@ -13,21 +13,28 @@ class MyCard extends StatelessWidget {
       child: Container(
         width: 420,
         decoration: ShapeDecoration(
+          image: const DecorationImage(
+            image: AssetImage(Images.iconsCardBackgroundAffect),
+          ),
           color: const Color(0xFF4EB7F2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        child: ListTile(
-          title: Text(
-            "Name card",
-            style: AppStyles.regular16.copyWith(color: Colors.white),
-          ),
-          subtitle: Text(
-            "Syah Bandi",
-            style: AppStyles.medium20.copyWith(color: Colors.white),
-          ),
-          trailing: SvgPicture.asset(Images.iconsCardGallery),
+        child: Column(
+          children: [
+            ListTile(
+              title: Text(
+                "Name card",
+                style: AppStyles.regular16.copyWith(color: Colors.white),
+              ),
+              subtitle: Text(
+                "Syah Bandi",
+                style: AppStyles.medium20.copyWith(color: Colors.white),
+              ),
+              trailing: SvgPicture.asset(Images.iconsCardGallery),
+            ),
+          ],
         ),
       ),
     );
