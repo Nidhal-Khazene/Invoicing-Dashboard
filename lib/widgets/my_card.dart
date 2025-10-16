@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:invoicing_dashboard/constants.dart';
 import 'package:invoicing_dashboard/utils/app_styles.dart';
 import 'package:invoicing_dashboard/utils/images.dart';
 
@@ -11,12 +12,12 @@ class MyCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: Container(
-        width: 420,
         decoration: ShapeDecoration(
           image: const DecorationImage(
+            fit: BoxFit.fill,
             image: AssetImage(Images.iconsCardBackgroundAffect),
           ),
-          color: const Color(0xFF4EB7F2),
+          color: kPrimaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
@@ -25,7 +26,11 @@ class MyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              contentPadding: const EdgeInsets.only(left: 31, right: 45),
+              contentPadding: const EdgeInsets.only(
+                left: 31,
+                right: 45,
+                top: 20,
+              ),
               title: Text(
                 "Name card",
                 style: AppStyles.regular16.copyWith(color: Colors.white),
