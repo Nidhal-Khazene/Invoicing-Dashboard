@@ -13,6 +13,7 @@ class QuickInvoice extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomBackgroundContainer(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const QuickInvoiceHeader(),
           const SizedBox(height: 12),
