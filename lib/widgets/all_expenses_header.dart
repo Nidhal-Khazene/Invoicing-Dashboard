@@ -12,7 +12,7 @@ class AllExpensesHeader extends StatelessWidget {
       children: [
         Text("All Expenses", style: AppStyles.semiBold20),
         const Expanded(child: SizedBox()),
-        const RangeOption(),
+        const RangeOption(title: "Monthly"),
       ],
     );
   }

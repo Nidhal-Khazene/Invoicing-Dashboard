@@ -4,8 +4,8 @@ import '../constants.dart';
 import '../utils/app_styles.dart';
 
 class RangeOption extends StatelessWidget {
-  const RangeOption({super.key});
-
+  const RangeOption({super.key, required this.title});
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,7 +19,7 @@ class RangeOption extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text("Monthly", style: AppStyles.medium16),
+          Text(title, style: AppStyles.medium16),
           const SizedBox(width: 18),
           Transform.rotate(
             angle: -1.5708,
