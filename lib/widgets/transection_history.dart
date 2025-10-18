@@ -14,16 +14,20 @@ class TransectionHistory extends StatefulWidget {
 class _TransectionHistoryState extends State<TransectionHistory> {
   List<TransectionListTileModel> items = const [
     TransectionListTileModel(
+      trailingTitleColor: Color(0xffF3735E),
       title: "Cash Withdrawal",
       subtitle: "13 Apr, 2022 ",
       trailingTitle: r"$20,129",
     ),
     TransectionListTileModel(
+      trailingTitleColor: Color(0xff7DD97B),
       title: "Landing Page project",
       subtitle: "13 Apr, 2022 at 3:30 PM",
       trailingTitle: r"$2,000",
     ),
     TransectionListTileModel(
+      trailingTitleColor: Color(0xff7DD97B),
+
       title: "Juni Mobile App project",
       subtitle: "13 Apr, 2022 at 3:30 PM",
       trailingTitle: r"$20,129",
