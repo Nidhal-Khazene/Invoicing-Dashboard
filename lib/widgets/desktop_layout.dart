@@ -15,7 +15,6 @@ class DesktopLayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(flex: 3, child: AllExpensesAndQuickInvoiceSection()),
         SizedBox(width: 24),
-        // Expanded(flex: 2, child: MyCardsSection()),
         Expanded(flex: 2, child: MyCardsSection()),
       ],
     );

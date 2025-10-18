@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:invoicing_dashboard/widgets/my_card.dart';
 
 class MyCardsCustomPageView extends StatelessWidget {
-  const MyCardsCustomPageView({super.key});
-
+  const MyCardsCustomPageView({super.key, required this.pageController});
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return ExpandablePageView(
+      controller: pageController,
       scrollDirection: Axis.horizontal,
       children: List.generate(3, (index) => const MyCard()),
     );
