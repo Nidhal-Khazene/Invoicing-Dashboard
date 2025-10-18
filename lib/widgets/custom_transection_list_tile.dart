@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:invoicing_dashboard/utils/app_styles.dart';
+import 'package:invoicing_dashboard/widgets/transection_list_tile_model.dart';
 
 class CustomTransectionListTile extends StatelessWidget {
   const CustomTransectionListTile({
     super.key,
-    required this.title,
-    required this.subtitle,
-    required this.trailingText,
+    required this.transectionListTileModel,
+    this.trailingTextColor,
   });
-  final String title, subtitle, trailingText;
+  final TransectionListTileModel transectionListTileModel;
+  final Color? trailingTextColor;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,9 +20,18 @@ class CustomTransectionListTile extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       child: ListTile(
-        title: Text(title, style: AppStyles.semiBold16),
-        subtitle: Text(subtitle, style: AppStyles.regular16),
-        trailing: Text(trailingText, style: AppStyles.semiBold20),
+        title: Text(
+          transectionListTileModel.title,
+          style: AppStyles.semiBold16,
+        ),
+        subtitle: Text(
+          transectionListTileModel.subtitle,
+          style: AppStyles.regular16,
+        ),
+        trailing: Text(
+          transectionListTileModel.trailingTitle,
+          style: AppStyles.semiBold20.copyWith(color: trailingTextColor),
+        ),
       ),
     );
   }
