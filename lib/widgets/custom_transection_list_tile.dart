@@ -20,6 +20,7 @@ class CustomTransectionListTile extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       child: ListTile(
+        contentPadding: EdgeInsets.zero,
         title: Text(
           transectionListTileModel.title,
           style: AppStyles.semiBold16,
