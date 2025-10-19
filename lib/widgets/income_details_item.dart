@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:invoicing_dashboard/constants.dart';
 import 'package:invoicing_dashboard/utils/app_styles.dart';
+import 'package:invoicing_dashboard/widgets/income_details_item_model.dart';
 
 class IncomeDetailsItem extends StatelessWidget {
-  const IncomeDetailsItem({
-    super.key,
-    required this.color,
-    required this.text,
-    required this.value,
-  });
-  final Color color;
-  final String text;
-  final double value;
+  const IncomeDetailsItem({super.key, required this.itemModel});
+  final IncomeDetailsItemModel itemModel;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -18,12 +13,21 @@ class IncomeDetailsItem extends StatelessWidget {
         Container(
           width: 12,
           height: 12,
-          decoration: ShapeDecoration(shape: const OvalBorder(), color: color),
+          decoration: ShapeDecoration(
+            shape: const OvalBorder(),
+            color: itemModel.color,
+          ),
         ),
         const SizedBox(width: 12),
-        Text(text, style: AppStyles.regular16),
+        Text(
+          itemModel.text,
+          style: AppStyles.regular16.copyWith(color: kSecondaryColor),
+        ),
         const Expanded(child: SizedBox()),
-        Text("$value%", style: AppStyles.medium16),
+        Text(
+          "${itemModel.value}%",
+          style: AppStyles.medium16.copyWith(color: const Color(0xff208CC8)),
+        ),
       ],
     );
   }
