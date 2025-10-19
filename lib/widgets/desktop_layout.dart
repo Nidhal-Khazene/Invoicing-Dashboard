@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:invoicing_dashboard/widgets/card_and_transection_view_section.dart';
 import 'package:invoicing_dashboard/widgets/custom_drawer.dart';
-import 'package:invoicing_dashboard/widgets/income_section.dart';
 
 import 'all_expenses_and_quick_invoice_section.dart';
+import 'card_and_transection_view_section.dart';
+import 'income_section.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -21,6 +21,7 @@ class DesktopLayout extends StatelessWidget {
           child: Column(
             children: [
               CardAndTransectionViewSection(),
+              SizedBox(height: 24),
               Expanded(child: IncomeSection()),
             ],
           ),
