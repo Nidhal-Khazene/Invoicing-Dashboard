@@ -23,7 +23,7 @@ class IncomeDetailsItem extends StatelessWidget {
         const SizedBox(width: 12),
         Text(text, style: AppStyles.regular16),
         const Expanded(child: SizedBox()),
-        Text("%$value", style: AppStyles.medium16),
+        Text("$value%", style: AppStyles.medium16),
       ],
     );
   }
