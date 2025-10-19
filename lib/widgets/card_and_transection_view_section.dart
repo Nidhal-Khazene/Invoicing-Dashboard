@@ -11,13 +11,11 @@ class CardAndTransectionViewSection extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.only(top: 40, right: 32),
       child: CustomBackgroundContainer(
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(child: MyCardsSection()),
-            SliverToBoxAdapter(
-              child: Divider(height: 40, color: Color(0xffF1F1F1)),
-            ),
-            SliverToBoxAdapter(child: TransectionHistory()),
+        child: Column(
+          children: [
+            MyCardsSection(),
+            Divider(height: 40, color: Color(0xffF1F1F1)),
+            TransectionHistory(),
           ],
         ),
       ),

@@ -11,7 +11,8 @@ class IncomeDetailsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      trailing: Container(
+      contentPadding: EdgeInsets.zero,
+      leading: Container(
         width: 12,
         height: 12,
         decoration: ShapeDecoration(
@@ -23,7 +24,7 @@ class IncomeDetailsItem extends StatelessWidget {
         itemModel.text,
         style: AppStyles.regular16.copyWith(color: kSecondaryColor),
       ),
-      leading: Text(
+      trailing: Text(
         "${itemModel.value}%",
         style: AppStyles.medium16.copyWith(color: const Color(0xff208CC8)),
       ),

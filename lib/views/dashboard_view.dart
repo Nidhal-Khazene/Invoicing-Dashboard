@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:invoicing_dashboard/widgets/adaptive_layout_widget.dart';
-import 'package:invoicing_dashboard/widgets/desktop_layout.dart';
+
+import '../widgets/desktop_layout.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});
