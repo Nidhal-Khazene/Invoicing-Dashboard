@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:invoicing_dashboard/widgets/all_expenses_and_quick_invoice_section.dart';
+import 'package:invoicing_dashboard/widgets/card_and_transection_view_section.dart';
 import 'package:invoicing_dashboard/widgets/custom_drawer.dart';
 
 class TabletLayout extends StatelessWidget {
@@ -11,7 +12,17 @@ class TabletLayout extends StatelessWidget {
       children: [
         Expanded(child: CustomDrawer()),
         SizedBox(width: 32),
-        Expanded(flex: 3, child: AllExpensesAndQuickInvoiceSection()),
+        Expanded(
+          flex: 3,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                AllExpensesAndQuickInvoiceSection(),
+                CardAndTransectionViewSection(),
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }
