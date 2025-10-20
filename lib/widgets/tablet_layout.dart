@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:invoicing_dashboard/widgets/all_expenses_and_quick_invoice_section.dart';
 import 'package:invoicing_dashboard/widgets/card_and_transection_view_section.dart';
 import 'package:invoicing_dashboard/widgets/custom_drawer.dart';
+import 'package:invoicing_dashboard/widgets/income_section.dart';
 
 class TabletLayout extends StatelessWidget {
   const TabletLayout({super.key});
@@ -18,7 +19,10 @@ class TabletLayout extends StatelessWidget {
             child: Column(
               children: [
                 AllExpensesAndQuickInvoiceSection(),
+                SizedBox(height: 24),
                 CardAndTransectionViewSection(),
+                SizedBox(height: 24),
+                IncomeSection(),
               ],
             ),
           ),

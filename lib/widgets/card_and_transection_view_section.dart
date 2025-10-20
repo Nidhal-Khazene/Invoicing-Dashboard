@@ -8,16 +8,13 @@ class CardAndTransectionViewSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 40, right: 32),
-      child: CustomBackgroundContainer(
-        child: Column(
-          children: [
-            MyCardsSection(),
-            Divider(height: 40, color: Color(0xffF1F1F1)),
-            TransectionHistory(),
-          ],
-        ),
+    return const CustomBackgroundContainer(
+      child: Column(
+        children: [
+          MyCardsSection(),
+          Divider(height: 40, color: Color(0xffF1F1F1)),
+          TransectionHistory(),
+        ],
       ),
     );
   }

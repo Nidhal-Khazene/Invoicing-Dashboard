@@ -7,16 +7,18 @@ class AdaptiveLayout extends StatelessWidget {
     required this.tabletLayoutFunction,
     required this.desktopLayoutFunction,
   });
+
   final WidgetBuilder mobileLayoutFunction,
       tabletLayoutFunction,
       desktopLayoutFunction;
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth < 800) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.only(right: 16),
             child: mobileLayoutFunction(context),
           );
         } else if (constraints.maxWidth < 1200) {
@@ -25,7 +27,10 @@ class AdaptiveLayout extends StatelessWidget {
             child: tabletLayoutFunction(context),
           );
         } else {
-          return desktopLayoutFunction(context);
+          return Padding(
+            padding: const EdgeInsets.only(right: 16),
+            child: desktopLayoutFunction(context),
+          );
         }
       },
     );
