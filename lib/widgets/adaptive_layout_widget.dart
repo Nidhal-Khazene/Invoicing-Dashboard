@@ -21,7 +21,7 @@ class AdaptiveLayout extends StatelessWidget {
           );
         } else if (constraints.maxWidth < 1200) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.only(right: 16),
             child: tabletLayoutFunction(context),
           );
         } else {
