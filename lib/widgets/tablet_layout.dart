@@ -18,7 +18,10 @@ class TabletLayout extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                AllExpensesAndQuickInvoiceSection(),
+                Padding(
+                  padding: EdgeInsets.only(top: 40),
+                  child: AllExpensesAndQuickInvoiceSection(),
+                ),
                 SizedBox(height: 24),
                 CardAndTransectionViewSection(),
                 SizedBox(height: 24),
