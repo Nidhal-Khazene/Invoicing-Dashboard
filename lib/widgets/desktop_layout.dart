@@ -16,24 +16,31 @@ class DesktopLayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(
           flex: 5,
-          child: Row(
-            children: [
-              Expanded(
-                flex: 3,
-                child: Padding(
-                  padding: EdgeInsets.only(top: 40),
-                  child: AllExpensesAndQuickInvoiceSection(),
-                ),
-              ),
-              SizedBox(width: 24),
-              Expanded(
-                flex: 2,
-                child: Column(
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
                   children: [
-                    SizedBox(height: 40),
-                    CardAndTransectionViewSection(),
-                    SizedBox(height: 24),
-                    Expanded(child: IncomeSection()),
+                    Expanded(
+                      flex: 3,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 40),
+                        child: AllExpensesAndQuickInvoiceSection(),
+                      ),
+                    ),
+                    SizedBox(width: 24),
+                    Expanded(
+                      flex: 2,
+                      child: Column(
+                        children: [
+                          SizedBox(height: 40),
+                          CardAndTransectionViewSection(),
+                          SizedBox(height: 24),
+                          Expanded(child: IncomeSection()),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
