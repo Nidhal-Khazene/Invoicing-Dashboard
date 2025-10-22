@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:invoicing_dashboard/constants.dart';
+import 'package:invoicing_dashboard/utils/size_config.dart';
 import 'package:invoicing_dashboard/widgets/adaptive_layout_widget.dart';
 import 'package:invoicing_dashboard/widgets/custom_drawer.dart';
 import 'package:invoicing_dashboard/widgets/mobile_layout.dart';
@@ -21,7 +22,7 @@ class _DashboardViewState extends State<DashboardView> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: MediaQuery.sizeOf(context).width < 800
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.tabletBreakPoint
           ? AppBar(
               leading: IconButton(
                 onPressed: () {
@@ -33,7 +34,7 @@ class _DashboardViewState extends State<DashboardView> {
               backgroundColor: kPrimaryColor,
             )
           : null,
-      drawer: MediaQuery.sizeOf(context).width < 800
+      drawer: MediaQuery.sizeOf(context).width < SizeConfig.desktopBreakPoint
           ? const CustomDrawer()
           : null,
       body: AdaptiveLayout(
