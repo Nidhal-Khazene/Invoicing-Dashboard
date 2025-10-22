@@ -13,7 +13,7 @@ class IncomeSection extends StatelessWidget {
       child: Column(
         children: [
           IncomeSectionHeader(),
-          SizedBox(height: 16),
+          SizedBox(height: 25),
           IncomeSectionBody(),
         ],
       ),
