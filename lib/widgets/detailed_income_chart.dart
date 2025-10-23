@@ -15,7 +15,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(aspectRatio: 1, child: PieChart(getChartData()));
+    return SizedBox(width: 200, height: 200, child: PieChart(getChartData()));
   }
 
   PieChartData getChartData() {
@@ -35,48 +35,48 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           titleStyle: AppStyles.semiBold16.copyWith(
             color: currentSectionIndex == 0 ? kPrimaryColor : Colors.white,
           ),
-          title: currentSectionIndex == 0 ? "Design Service" : null,
-          titlePositionPercentageOffset: currentSectionIndex == 0 ? -1.2 : null,
+          title: currentSectionIndex == 0 ? "Design Service" : "%40",
+          titlePositionPercentageOffset: currentSectionIndex == 0 ? 1.4 : null,
           value: 40,
           radius: currentSectionIndex == 0
-              ? kTouchRadiusChart
-              : kNormalRadiusChart,
+              ? kTouchRadiusDetailedChart
+              : kNormalRadiusDetailedChart,
         ),
         PieChartSectionData(
           color: const Color(0xff4EB7F2),
           titleStyle: AppStyles.semiBold16.copyWith(
             color: currentSectionIndex == 1 ? kPrimaryColor : Colors.white,
           ),
-          title: currentSectionIndex == 1 ? "Design Product" : null,
-          titlePositionPercentageOffset: currentSectionIndex == 1 ? -1.5 : null,
+          title: currentSectionIndex == 1 ? "Design Product" : "%25",
+          titlePositionPercentageOffset: currentSectionIndex == 1 ? 2.1 : null,
           value: 25,
           radius: currentSectionIndex == 1
-              ? kTouchRadiusChart
-              : kNormalRadiusChart,
+              ? kTouchRadiusDetailedChart
+              : kNormalRadiusDetailedChart,
         ),
         PieChartSectionData(
           color: const Color(0xff064061),
           titleStyle: AppStyles.semiBold16.copyWith(
             color: currentSectionIndex == 2 ? kPrimaryColor : Colors.white,
           ),
-          title: currentSectionIndex == 2 ? "Product Royalti" : null,
-          titlePositionPercentageOffset: currentSectionIndex == 2 ? -1.0 : null,
+          title: currentSectionIndex == 2 ? "Product Royalti" : "%20",
+          titlePositionPercentageOffset: currentSectionIndex == 2 ? 1.4 : null,
           value: 20,
           radius: currentSectionIndex == 2
-              ? kTouchRadiusChart
-              : kNormalRadiusChart,
+              ? kTouchRadiusDetailedChart
+              : kNormalRadiusDetailedChart,
         ),
         PieChartSectionData(
           color: const Color(0xffE2DECD),
           titleStyle: AppStyles.semiBold16.copyWith(
             color: currentSectionIndex == 3 ? kPrimaryColor : Colors.white,
           ),
-          title: currentSectionIndex == 3 ? "Other" : null,
-          titlePositionPercentageOffset: currentSectionIndex == 3 ? -0.6 : null,
+          title: currentSectionIndex == 3 ? "Other" : "%22",
+          titlePositionPercentageOffset: currentSectionIndex == 3 ? 1.4 : null,
           value: 22,
           radius: currentSectionIndex == 3
-              ? kTouchRadiusChart
-              : kNormalRadiusChart,
+              ? kTouchRadiusDetailedChart
+              : kNormalRadiusDetailedChart,
         ),
       ],
     );
