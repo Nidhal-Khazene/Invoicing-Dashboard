@@ -41,10 +41,10 @@ class _TransectionHistoryState extends State<TransectionHistory> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Transaction History", style: AppStyles.semiBold20),
+            Text("Transaction History", style: AppStyles.semiBold20(context)),
             Text(
               "See all",
-              style: AppStyles.medium16.copyWith(color: kPrimaryColor),
+              style: AppStyles.medium16(context).copyWith(color: kPrimaryColor),
             ),
           ],
         ),

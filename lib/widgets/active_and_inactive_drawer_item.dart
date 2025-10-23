@@ -14,7 +14,9 @@ class ActiveDrawerItem extends StatelessWidget {
     return ListTile(
       title: Text(
         drawerItemModel.title,
-        style: AppStyles.bold16.copyWith(color: const Color(0xFF4EB7F2)),
+        style: AppStyles.bold16(
+          context,
+        ).copyWith(color: const Color(0xFF4EB7F2)),
       ),
       leading: SvgPicture.asset(drawerItemModel.leading),
       trailing: Container(
@@ -35,7 +37,9 @@ class InactiveDrawerItem extends StatelessWidget {
     return ListTile(
       title: Text(
         drawerItemModel.title,
-        style: AppStyles.regular16.copyWith(color: const Color(0xff064061)),
+        style: AppStyles.regular16(
+          context,
+        ).copyWith(color: const Color(0xff064061)),
       ),
       leading: SvgPicture.asset(drawerItemModel.leading),
     );

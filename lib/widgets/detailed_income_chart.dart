@@ -32,7 +32,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
       sections: [
         PieChartSectionData(
           color: const Color(0xff208CC8),
-          titleStyle: AppStyles.semiBold16.copyWith(
+          titleStyle: AppStyles.semiBold16(context).copyWith(
             color: currentSectionIndex == 0 ? kPrimaryColor : Colors.white,
           ),
           title: currentSectionIndex == 0 ? "Design Service" : "%40",
@@ -44,7 +44,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         ),
         PieChartSectionData(
           color: const Color(0xff4EB7F2),
-          titleStyle: AppStyles.semiBold16.copyWith(
+          titleStyle: AppStyles.semiBold16(context).copyWith(
             color: currentSectionIndex == 1 ? kPrimaryColor : Colors.white,
           ),
           title: currentSectionIndex == 1 ? "Design Product" : "%25",
@@ -56,7 +56,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         ),
         PieChartSectionData(
           color: const Color(0xff064061),
-          titleStyle: AppStyles.semiBold16.copyWith(
+          titleStyle: AppStyles.semiBold16(context).copyWith(
             color: currentSectionIndex == 2 ? kPrimaryColor : Colors.white,
           ),
           title: currentSectionIndex == 2 ? "Product Royalti" : "%20",
@@ -68,7 +68,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         ),
         PieChartSectionData(
           color: const Color(0xffE2DECD),
-          titleStyle: AppStyles.semiBold16.copyWith(
+          titleStyle: AppStyles.semiBold16(context).copyWith(
             color: currentSectionIndex == 3 ? kPrimaryColor : Colors.white,
           ),
           title: currentSectionIndex == 3 ? "Other" : "%22",

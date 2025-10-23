@@ -10,7 +10,7 @@ class IncomeSectionHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text("Income", style: AppStyles.semiBold20),
+        Text("Income", style: AppStyles.semiBold20(context)),
         const RangeOption(title: "Monthly"),
       ],
     );

@@ -19,7 +19,7 @@ class RangeOption extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(title, style: AppStyles.medium16),
+          Text(title, style: AppStyles.medium16(context)),
           const SizedBox(width: 18),
           Transform.rotate(
             angle: -1.5708,

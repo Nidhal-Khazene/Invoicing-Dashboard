@@ -17,7 +17,7 @@ class CustomTextField extends StatelessWidget {
         enabledBorder: buildOutlineInputBorder(),
         focusedBorder: buildOutlineInputBorder(),
         hintText: hintText,
-        hintStyle: AppStyles.regular16,
+        hintStyle: AppStyles.regular16(context),
       ),
     );
   }

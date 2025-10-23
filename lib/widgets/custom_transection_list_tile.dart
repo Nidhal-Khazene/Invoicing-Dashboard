@@ -19,17 +19,17 @@ class CustomTransectionListTile extends StatelessWidget {
       child: ListTile(
         title: Text(
           transectionListTileModel.title,
-          style: AppStyles.semiBold16,
+          style: AppStyles.semiBold16(context),
         ),
         subtitle: Text(
           transectionListTileModel.subtitle,
-          style: AppStyles.regular16,
+          style: AppStyles.regular16(context),
         ),
         trailing: Text(
           transectionListTileModel.trailingTitle,
-          style: AppStyles.semiBold20.copyWith(
-            color: transectionListTileModel.trailingTitleColor,
-          ),
+          style: AppStyles.semiBold20(
+            context,
+          ).copyWith(color: transectionListTileModel.trailingTitleColor),
         ),
       ),
     );
