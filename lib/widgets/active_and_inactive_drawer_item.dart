@@ -33,7 +33,10 @@ class InactiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(drawerItemModel.title, style: AppStyles.semiBold16),
+      title: Text(
+        drawerItemModel.title,
+        style: AppStyles.regular16.copyWith(color: const Color(0xff064061)),
+      ),
       leading: SvgPicture.asset(drawerItemModel.leading),
     );
   }
