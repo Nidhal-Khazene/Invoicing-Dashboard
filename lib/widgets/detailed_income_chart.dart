@@ -48,7 +48,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             color: currentSectionIndex == 1 ? kPrimaryColor : Colors.white,
           ),
           title: currentSectionIndex == 1 ? "Design Product" : "%25",
-          titlePositionPercentageOffset: currentSectionIndex == 1 ? 2.1 : null,
+          titlePositionPercentageOffset: currentSectionIndex == 1 ? 2.4 : null,
           value: 25,
           radius: currentSectionIndex == 1
               ? kTouchRadiusDetailedChart
@@ -72,7 +72,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             color: currentSectionIndex == 3 ? kPrimaryColor : Colors.white,
           ),
           title: currentSectionIndex == 3 ? "Other" : "%22",
-          titlePositionPercentageOffset: currentSectionIndex == 3 ? 1.4 : null,
+          titlePositionPercentageOffset: currentSectionIndex == 3 ? 1.5 : null,
           value: 22,
           radius: currentSectionIndex == 3
               ? kTouchRadiusDetailedChart
