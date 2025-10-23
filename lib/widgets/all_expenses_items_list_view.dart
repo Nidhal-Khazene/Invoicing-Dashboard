@@ -40,34 +40,20 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
       children: itemModel.asMap().entries.map((element) {
         int index = element.key;
         var item = element.value;
-        if (index == 1) {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                updateSelectedIndex(index);
-              },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 6),
-                child: AllExpensesItem(
-                  isActive: selectedIndex == index,
-                  allExpensesItemModel: item,
-                ),
-              ),
-            ),
-          );
-        } else {
-          return Expanded(
-            child: GestureDetector(
-              onTap: () {
-                updateSelectedIndex(index);
-              },
+        return Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateSelectedIndex(index);
+            },
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 6 : 0),
               child: AllExpensesItem(
                 isActive: selectedIndex == index,
                 allExpensesItemModel: item,
               ),
             ),
-          );
-        }
+          ),
+        );
       }).toList(),
     );
   }
