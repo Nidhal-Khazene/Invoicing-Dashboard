@@ -5,7 +5,7 @@ import 'package:invoicing_dashboard/views/dashboard_view.dart';
 void main() {
   runApp(
     DevicePreview(
-      enabled: true,
+      enabled: false,
       builder: (context) => const InvoicingDashboard(),
     ),
   );

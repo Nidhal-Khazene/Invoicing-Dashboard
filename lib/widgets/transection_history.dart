@@ -20,13 +20,13 @@ class _TransectionHistoryState extends State<TransectionHistory> {
       trailingTitle: r"$20,129",
     ),
     TransectionListTileModel(
-      trailingTitleColor: Color(0xff7DD97B),
+      trailingTitleColor: Color(0xffF3B25E),
       title: "Landing Page project",
       subtitle: "13 Apr, 2022 at 3:30 PM",
       trailingTitle: r"$2,000",
     ),
     TransectionListTileModel(
-      trailingTitleColor: Color(0xff7DD97B),
+      trailingTitleColor: Color(0xffF3B25E),
 
       title: "Juni Mobile App project",
       subtitle: "13 Apr, 2022 at 3:30 PM",

@@ -28,7 +28,7 @@ class IncomeDetailsItem extends StatelessWidget {
         "${itemModel.value}%",
         style: AppStyles.medium16(
           context,
-        ).copyWith(color: const Color(0xff208CC8)),
+        ).copyWith(color: const Color(0xff10B981)),
       ),
     );
   }

@@ -31,7 +31,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
       sectionsSpace: 0,
       sections: [
         PieChartSectionData(
-          color: const Color(0xff208CC8),
+          color: const Color(0xff0B7A4E),
           titleStyle: AppStyles.semiBold16(context).copyWith(
             color: currentSectionIndex == 0 ? kPrimaryColor : Colors.white,
           ),
@@ -43,9 +43,9 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
               : kNormalRadiusDetailedChart,
         ),
         PieChartSectionData(
-          color: const Color(0xff4EB7F2),
+          color: const Color(0xff10B981),
           titleStyle: AppStyles.semiBold16(context).copyWith(
-            color: currentSectionIndex == 1 ? kPrimaryColor : Colors.white,
+            color: currentSectionIndex == 1 ? kSecondaryColor : Colors.white,
           ),
           title: currentSectionIndex == 1 ? "Design Product" : "%25",
           titlePositionPercentageOffset: currentSectionIndex == 1 ? 2.4 : null,
@@ -55,7 +55,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
               : kNormalRadiusDetailedChart,
         ),
         PieChartSectionData(
-          color: const Color(0xff064061),
+          color: const Color(0xff064E3B),
           titleStyle: AppStyles.semiBold16(context).copyWith(
             color: currentSectionIndex == 2 ? kPrimaryColor : Colors.white,
           ),
@@ -67,9 +67,9 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
               : kNormalRadiusDetailedChart,
         ),
         PieChartSectionData(
-          color: const Color(0xffE2DECD),
+          color: const Color(0xffA7F3D0),
           titleStyle: AppStyles.semiBold16(context).copyWith(
-            color: currentSectionIndex == 3 ? kPrimaryColor : Colors.white,
+            color: currentSectionIndex == 3 ? kSecondaryColor : Colors.white,
           ),
           title: currentSectionIndex == 3 ? "Other" : "%22",
           titlePositionPercentageOffset: currentSectionIndex == 3 ? 1.5 : null,

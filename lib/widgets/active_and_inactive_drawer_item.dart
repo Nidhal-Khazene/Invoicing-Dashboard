@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:invoicing_dashboard/constants.dart';
 
 import '../utils/app_styles.dart';
 import 'drawer_item_model.dart';
@@ -14,14 +15,12 @@ class ActiveDrawerItem extends StatelessWidget {
     return ListTile(
       title: Text(
         drawerItemModel.title,
-        style: AppStyles.bold16(
-          context,
-        ).copyWith(color: const Color(0xFF4EB7F2)),
+        style: AppStyles.bold16(context).copyWith(color: kPrimaryColor),
       ),
       leading: SvgPicture.asset(drawerItemModel.leading),
       trailing: Container(
         width: 3.27,
-        decoration: const BoxDecoration(color: Color(0xFF4EB7F2)),
+        decoration: BoxDecoration(color: kPrimaryColor),
       ),
     );
   }

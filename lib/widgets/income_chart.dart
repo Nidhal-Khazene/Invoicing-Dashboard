@@ -30,7 +30,7 @@ class _IncomeChartState extends State<IncomeChart> {
       sectionsSpace: 0,
       sections: [
         PieChartSectionData(
-          color: const Color(0xff208CC8),
+          color: const Color(0xff047857),
           value: 40,
           showTitle: false,
           radius: currentSectionIndex == 0
@@ -38,7 +38,7 @@ class _IncomeChartState extends State<IncomeChart> {
               : kNormalRadiusChart,
         ),
         PieChartSectionData(
-          color: const Color(0xff4EB7F2),
+          color: const Color(0xff10B981),
           value: 25,
           showTitle: false,
           radius: currentSectionIndex == 1
@@ -46,7 +46,7 @@ class _IncomeChartState extends State<IncomeChart> {
               : kNormalRadiusChart,
         ),
         PieChartSectionData(
-          color: const Color(0xff064061),
+          color: const Color(0xff064E3B),
           value: 20,
           showTitle: false,
           radius: currentSectionIndex == 2
@@ -54,7 +54,7 @@ class _IncomeChartState extends State<IncomeChart> {
               : kNormalRadiusChart,
         ),
         PieChartSectionData(
-          color: const Color(0xffE2DECD),
+          color: const Color(0xffA7F3D0),
           value: 22,
           showTitle: false,
           radius: currentSectionIndex == 3
