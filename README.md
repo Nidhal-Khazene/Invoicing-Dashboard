@@ -14,6 +14,17 @@ A responsive and adaptive invoicing dashboard application built with Flutter. Th
 -   **Custom Widgets**: A rich library of custom widgets for buttons, text fields, containers, and list tiles to ensure a consistent and polished UI.
 -   **Navigation Drawer**: A clean and functional navigation drawer for easy access to different parts of the application.
 
+## Screenshots
+
+|                            Icon Launch Screen                            |                              Splash Screen                               |
+|:------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
+| <img src="assets/preview/mobile_view_1.png" alt="mobile_1" width="250"/> | <img src="assets/preview/mobile_view_2.png" alt="mobile_2" width="250"/> |
+
+|                               Home Screen                                |                             Location Details                             |
+|:------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
+| <img src="assets/preview/mobile_view_3.png" alt="mobile_3" width="250"/> | <img src="assets/preview/mobile_view_4.png" alt="mobile_4" width="250"/> |
+
+
 ## Tech Stack
 
 -   **Framework**: Flutter
