@@ -16,11 +16,11 @@ A responsive and adaptive invoicing dashboard application built with Flutter. Th
 
 ## Screenshots
 
-|                            Icon Launch Screen                            |                              Splash Screen                               |
+|                    Expenses and Quick Invoice Screen                     |                              Drawer Screen                               |
 |:------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
 | <img src="assets/preview/mobile_view_1.png" alt="mobile_1" width="250"/> | <img src="assets/preview/mobile_view_2.png" alt="mobile_2" width="250"/> |
 
-|                               Home Screen                                |                             Location Details                             |
+|                               Card Screen                                |                          Transection and Income                          |
 |:------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
 | <img src="assets/preview/mobile_view_3.png" alt="mobile_3" width="250"/> | <img src="assets/preview/mobile_view_4.png" alt="mobile_4" width="250"/> |
 
